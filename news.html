@@ -12,23 +12,23 @@
 <body>
   <!-- ヘッダー -->
   <header class="animated fadeInDown">
-    <div class="header-inner container">
+    <div class="container header-inner">
       <div class="logo">
-        <img src="assets/20241122-2026_5c69e44281e9b44b8058dad4245cd3db.png" alt="公式ロゴ">
+        <img src="20241122-2026_5c69e44281e9b44b8058dad4245cd3db.png" alt="公式ロゴ">
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <nav id="nav-menu">
-        <ul class="nav-links">
+        <ul>
           <li><a href="index.html">ホーム</a></li>
           <li><a href="about.html">チャットについて</a></li>
           <li><a href="news.html" class="active">速報情報</a></li>
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
     </div>
   </header>
 
@@ -38,7 +38,7 @@
     <article class="news-item animated fadeInLeft">
       <h3>2025年02月05日 - サンプル速報1</h3>
       <p>
-        詳細な速報内容をここに記載します。地震発生状況、気象情報、交通機関の運行状況など、必要な情報を迅速にお届けします。
+        詳細な速報内容をここに記載します。地震発生の状況、気象情報、交通機関の運行状況など、必要な情報を迅速にお届けします。
       </p>
     </article>
     <article class="news-item animated fadeInRight delay-1s">
@@ -56,5 +56,15 @@
       <p>&copy; 2025 地震速報 / 気象情報 / 交通情報共有オープンチャット. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- ハンバーガーメニュー用スクリプト -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
