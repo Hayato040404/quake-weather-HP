@@ -16,7 +16,12 @@
       <div class="logo">
         <img src="20241122-2026_5c69e44281e9b44b8058dad4245cd3db.png" alt="公式ロゴ">
       </div>
-      <nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav-menu">
         <ul>
           <li><a href="index.html">ホーム</a></li>
           <li><a href="about.html">チャットについて</a></li>
@@ -51,5 +56,15 @@
       <p>&copy; 2025 地震速報 / 気象情報 / 交通情報共有オープンチャット. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- ハンバーガーメニュー用スクリプト -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
