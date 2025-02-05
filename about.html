@@ -10,25 +10,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-  <!-- ヘッダー -->
+  <!-- ヘッダー（index.html と同様の構造） -->
   <header class="animated fadeInDown">
-    <div class="container header-inner">
+    <div class="header-inner container">
       <div class="logo">
-        <img src="20241122-2026_5c69e44281e9b44b8058dad4245cd3db.png" alt="公式ロゴ">
-      </div>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <img src="assets/20241122-2026_5c69e44281e9b44b8058dad4245cd3db.png" alt="公式ロゴ">
       </div>
       <nav id="nav-menu">
-        <ul>
+        <ul class="nav-links">
           <li><a href="index.html">ホーム</a></li>
           <li><a href="about.html" class="active">チャットについて</a></li>
           <li><a href="news.html">速報情報</a></li>
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
@@ -36,18 +36,18 @@
   <main class="container about-content animated fadeInUp">
     <h2>チャットの目的と運営理念</h2>
     <p>
-      当チャットは、地域の安全と迅速な情報伝達を目的とし、正確な情報の共有に努めています。万一の際、メンバー同士でサポートし合える信頼のネットワークを築いています。
+      当チャットは、地域の安全と迅速な情報伝達を目的とし、正確な情報共有に努めています。万一の際、メンバー同士でサポートし合える信頼のネットワークを構築しています。
     </p>
     <h3>運営方針</h3>
     <ul class="about-list">
-      <li>最新情報を迅速に提供する。</li>
-      <li>正確で信頼性の高い情報のみを共有する。</li>
-      <li>メンバー間の相互サポートを重視する。</li>
-      <li>安全で安心なコミュニティ運営を行う。</li>
+      <li>最新情報を迅速に提供する</li>
+      <li>正確で信頼性の高い情報のみを共有する</li>
+      <li>メンバー間の相互サポートを重視する</li>
+      <li>安全で安心なコミュニティ運営を行う</li>
     </ul>
     <h3>メンバー紹介</h3>
     <p>
-      約300名以上の多様な地域のメンバーが参加し、各分野の専門知識を活かして最新の情報を発信しています。
+      約300名以上の多様な地域のメンバーが参加し、各分野の専門知識を活かして最新情報を発信しています。
     </p>
   </main>
 
@@ -57,15 +57,5 @@
       <p>&copy; 2025 地震速報 / 気象情報 / 交通情報共有オープンチャット. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- ハンバーガーメニュー用スクリプト -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-  </script>
 </body>
 </html>
