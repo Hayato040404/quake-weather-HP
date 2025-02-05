@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <!-- 共通スタイルシート -->
   <link rel="stylesheet" href="styles.css">
+  <!-- Animate.css ※アニメーション用 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
   <!-- ヘッダー -->
@@ -17,7 +19,13 @@
       <div class="logo">
         <img src="20241122-2026_5c69e44281e9b44b8058dad4245cd3db.png" alt="公式ロゴ">
       </div>
-      <nav>
+      <!-- ハンバーガーメニュー（モバイル用） -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav-menu">
         <ul>
           <li><a href="index.html" class="active">ホーム</a></li>
           <li><a href="about.html">チャットについて</a></li>
@@ -81,7 +89,14 @@
     </div>
   </footer>
 
-  <!-- ※アニメーション用のライブラリ（Animate.css）の読み込み ※必要に応じてCDNなどで追加 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- ハンバーガーメニューのトグル用スクリプト -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
