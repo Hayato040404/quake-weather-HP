@@ -15,31 +15,33 @@
 <body>
   <!-- ヘッダー -->
   <header class="animated fadeInDown">
-    <div class="container header-inner">
+    <div class="header-inner container">
       <div class="logo">
-        <img src="20241122-2026_5c69e44281e9b44b8058dad4245cd3db.png" alt="公式ロゴ">
+        <!-- ロゴ画像：assets フォルダ内のファイル名に合わせてください -->
+        <img src="assets/20241122-2026_5c69e44281e9b44b8058dad4245cd3db.png" alt="公式ロゴ">
       </div>
-      <!-- ハンバーガーメニュー（モバイル用） -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <!-- ナビゲーション（通常メニュー＋ハンバーガー） -->
       <nav id="nav-menu">
-        <ul>
+        <ul class="nav-links">
           <li><a href="index.html" class="active">ホーム</a></li>
           <li><a href="about.html">チャットについて</a></li>
           <li><a href="news.html">速報情報</a></li>
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>
+      <!-- ハンバーガーメニュー（モバイル用） -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
   <!-- ヒーローセクション -->
-  <section class="hero animated fadeIn">
+  <section id="home" class="hero animated fadeIn">
     <div class="overlay"></div>
-    <div class="container hero-content">
+    <div class="hero-content container">
       <h1 class="animated slideInUp">地震速報 / 気象情報 / 交通情報共有オープンチャット</h1>
       <p class="animated slideInUp delay-1s">安心・迅速な情報共有で未来を守る</p>
       <a href="news.html" class="btn animated pulse infinite delay-2s">最新速報を見る</a>
@@ -47,7 +49,7 @@
   </section>
 
   <!-- サービス紹介 -->
-  <section class="features container animated fadeInUp delay-1s">
+  <section id="about" class="features container animated fadeInUp delay-1s">
     <h2>私たちの強み</h2>
     <div class="feature-cards">
       <div class="card animated zoomIn">
@@ -56,17 +58,17 @@
       </div>
       <div class="card animated zoomIn delay-1s">
         <h3>正確なデータ</h3>
-        <p>厳選された信頼性の高い情報源から、正確な情報をお届けします。</p>
+        <p>信頼性の高い情報源から、正確なデータを提供します。</p>
       </div>
       <div class="card animated zoomIn delay-2s">
         <h3>活発なコミュニティ</h3>
-        <p>300人以上のメンバーが、安心と信頼のネットワークを形成しています。</p>
+        <p>300人以上のメンバーが安心と信頼のネットワークを形成しています。</p>
       </div>
     </div>
   </section>
 
   <!-- 最新ニュースプレビュー -->
-  <section class="news-preview container animated fadeInUp delay-1s">
+  <section id="news" class="news-preview container animated fadeInUp delay-1s">
     <h2>最新速報情報</h2>
     <div class="news-cards">
       <article class="news-card animated fadeInLeft">
@@ -88,15 +90,5 @@
       <p>&copy; 2025 地震速報 / 気象情報 / 交通情報共有オープンチャット. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- ハンバーガーメニューのトグル用スクリプト -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-  </script>
 </body>
 </html>
